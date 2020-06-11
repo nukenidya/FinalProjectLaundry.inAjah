@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#039BE5</color>
+    <color name="colorPrimaryDark">#1E88E5</color>
+    <color name="colorAccent">#F35651</color>
+
+    <color name="btnSign">#F7D0CF</color>
+    <color name="cardview">#81C7FD</color>
+
+    <color name="overlayBG">#773b3839</color>
+    <color name="overlayActionBar">#1a1b1b</color>
+</resources>
