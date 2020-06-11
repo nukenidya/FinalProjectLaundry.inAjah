@@ -71,16 +71,13 @@ public class Keranjang extends AppCompatActivity {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(Keranjang.this);
         alertDialog.setTitle("Pesanan Akan Segera Di Proses");
         alertDialog.setMessage("Masukkan Alamat Anda");
-
         final EditText editAlamat = new EditText(Keranjang.this);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.MATCH_PARENT
         );
-
         editAlamat.setLayoutParams(lp);
         alertDialog.setView(editAlamat);
-
         alertDialog.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -91,9 +88,7 @@ public class Keranjang extends AppCompatActivity {
                         txtTotalHarga.getText().toString(),
                         keranjang
                 );
-
                 requests.child(String.valueOf(System.currentTimeMillis())).setValue(request);
-
                 new Database(getBaseContext()).cleanKeranjang();
                 Toast.makeText(Keranjang.this, "Terima Kasih Sudah Mencuci di Laundry.in Ajah", Toast.LENGTH_SHORT).show();
                 finish();
@@ -107,7 +102,6 @@ public class Keranjang extends AppCompatActivity {
         });
         alertDialog.show();
     }
-
     private void loadListKatalog() {
         keranjang = new Database(this).getKeranjang();
         adapter = new KeranjangAdapter(keranjang, this);
